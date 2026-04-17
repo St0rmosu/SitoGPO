@@ -3,24 +3,23 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import products from '@/lib/products.json';
 
 const slides = [
   {
-    before: products[0]?.prima || '/images/placeholder.jpg',
-    after: products[0]?.dopo || '/images/placeholder.jpg',
+    before: "https://placehold.co/1920x1080/57534e/white?text=PRIMA+Scrivania+1970",
+    after: "https://placehold.co/1920x1080/22c55e/white?text=DOPO+Scrivania+1970",
     title: 'Trasformazione',
     subtitle: 'Da mobile dimenticato a pezzo unico'
   },
   {
-    before: products[1]?.prima || '/images/placeholder.jpg',
-    after: products[1]?.dopo || '/images/placeholder.jpg',
+    before: "https://placehold.co/1920x1080/57534e/white?text=PRIMA+Com%C3%B2+1960",
+    after: "https://placehold.co/1920x1080/22c55e/white?text=DOPO+Com%C3%B2+1960",
     title: 'Rinascita',
     subtitle: 'Ogni mobile ha una storia da raccontare'
   },
   {
-    before: products[2]?.prima || '/images/placeholder.jpg',
-    after: products[2]?.dopo || '/images/placeholder.jpg',
+    before: "https://placehold.co/1920x1080/57534e/white?text=PRIMA+Libreria+1950",
+    after: "https://placehold.co/1920x1080/22c55e/white?text=DOPO+Libreria+1950",
     title: 'Sostenibilità',
     subtitle: 'Riduciamo l\'impatto ambientale insieme'
   }

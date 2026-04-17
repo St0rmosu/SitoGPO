@@ -10,9 +10,9 @@
     "materiali": "Vernice ecologica all'acqua, trattamento anti-UV",
     "co2_risparmiato": 25,
     "categoria": "Scrivanie",
-    "prima": "/images/products/scrivania-70/prima.jpg",
-    "dopo": "/images/products/scrivania-70/dopo.jpg",
-    "immagini": ["/images/products/scrivania-70/1.jpg", "/images/products/scrivania-70/2.jpg"]
+    "prima": "https://placehold.co/800x600/57534e/white?text=PRIMA+Scrivania+70",
+    "dopo": "https://placehold.co/800x600/22c55e/white?text=DOPO+Scrivania+70",
+    "immagini": ["https://placehold.co/800x600/22c55e/white?text=Scrivania+70+1", "https://placehold.co/800x600/22c55e/white?text=Scrivania+70+2"]
   },
   {
     "id": 2,
@@ -25,24 +25,24 @@
     "materiali": "Vernice bio neutra, carta vetrata fine, cera naturale",
     "co2_risparmiato": 18,
     "categoria": "Comò",
-    "prima": "/images/products/como/prima.jpg",
-    "dopo": "/images/products/como/dopo.jpg",
-    "immagini": ["/images/products/como/1.jpg", "/images/products/como/2.jpg"]
+    "prima": "https://placehold.co/800x600/57534e/white?text=PRIMA+Com%C3%B2+Vintage",
+    "dopo": "https://placehold.co/800x600/22c55e/white?text=DOPO+Com%C3%B2+Vintage",
+    "immagini": ["https://placehold.co/800x600/22c55e/white?text=Com%C3%B2+1", "https://placehold.co/800x600/22c55e/white?text=Com%C3%B2+2"]
   },
   {
     "id": 3,
     "nome": "Libreria Mid-Century",
     "slug": "libreria-mid-century",
-    "descrizione": "Libreriaintage degli anni '50 in teak. Struttura a tre ripiani con montanti in legno massello. Ideale per salotti e studi.",
+    "descrizione": "Libreria vintage degli anni '50 in teak. Struttura a tre ripiani con montanti in legno massello. Ideale per salotti e studi.",
     "prezzo": 520,
     "misure": "90x35x180 cm",
     "provenienza": "Firenze, Italia - Biblioteca privata",
     "materiali": "Olio naturale per legno, tintura noce",
     "co2_risparmiato": 22,
     "categoria": "Librerie",
-    "prima": "/images/products/libreria/prima.jpg",
-    "dopo": "/images/products/libreria/dopo.jpg",
-    "immagini": ["/images/products/libreria/1.jpg", "/images/products/libreria/2.jpg"]
+    "prima": "https://placehold.co/800x600/57534e/white?text=PRIMA+Libreria+50",
+    "dopo": "https://placehold.co/800x600/22c55e/white?text=DOPO+Libreria+50",
+    "immagini": ["https://placehold.co/800x600/22c55e/white?text=Libreria+1", "https://placehold.co/800x600/22c55e/white?text=Libreria+2"]
   },
   {
     "id": 4,
@@ -55,23 +55,23 @@
     "materiali": "Vernice laccata opaca, lucidatura marmo",
     "co2_risparmiato": 12,
     "categoria": "Tavolini",
-    "prima": "/images/products/tavolino/prima.jpg",
-    "dopo": "/images/products/tavolino/dopo.jpg",
-    "immagini": ["/images/products/tavolino/1.jpg", "/images/products/tavolino/2.jpg"]
+    "prima": "https://placehold.co/800x600/57534e/white?text=PRIMA+Tavolino+40",
+    "dopo": "https://placehold.co/800x600/22c55e/white?text=DOPO+Tavolino+40",
+    "immagini": ["https://placehold.co/800x600/22c55e/white?text=Tavolino+1", "https://placehold.co/800x600/22c55e/white?text=Tavolino+2"]
   },
   {
     "id": 5,
     "nome": "Armadio Anni '60",
     "slug": "armadio-anni-60",
-    "descrizione": "Armadio a due ante degli anni '60 con specchio originale. Capienza generosa e serrature funzionanti. Perfect per camere da letto.",
+    "descrizione": "Armadio a due ante degli anni '60 con specchio originale. Capienza generosa e serrature funzionanti. Perfetto per camere da letto.",
     "prezzo": 580,
     "misure": "140x60x200 cm",
     "provenienza": "Napoli, Italia - Casa popolare",
     "materiali": "Vernice ecologica bianca, ferramenta in ottone",
     "co2_risparmiato": 35,
     "categoria": "Armadi",
-    "prima": "/images/products/armadio/prima.jpg",
-    "dopo": "/images/products/armadio/dopo.jpg",
-    "immagini": ["/images/products/armadio/1.jpg", "/images/products/armadio/2.jpg"]
+    "prima": "https://placehold.co/800x600/57534e/white?text=PRIMA+Armadio+60",
+    "dopo": "https://placehold.co/800x600/22c55e/white?text=DOPO+Armadio+60",
+    "immagini": ["https://placehold.co/800x600/22c55e/white?text=Armadio+1", "https://placehold.co/800x600/22c55e/white?text=Armadio+2"]
   }
 ]
