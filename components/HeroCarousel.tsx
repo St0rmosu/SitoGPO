@@ -59,14 +59,14 @@ export default function HeroCarousel() {
           className="absolute inset-0"
         >
           <div className="relative h-full">
-            <motion.img
-              key={`${current}-${isAfter}`}
-              src={isAfter ? slides[current].after : slides[current].before}
-              alt={slides[current].title}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8 }}
-              className="w-full h-full object-cover"
+<motion.img
+  key={current}
+  src={isAfter ? slides[current].after : slides[current].before}
+  alt={slides[current].title}
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ duration: 0.8 }}
+  className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
           </div>
