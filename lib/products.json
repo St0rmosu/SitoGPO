@@ -10,9 +10,9 @@
     "materiali": "Vernice ecologica all'acqua, trattamento anti-UV",
     "co2_risparmiato": 25,
     "categoria": "Scrivanie",
-    "prima": "https://placehold.co/800x600/57534e/white?text=PRIMA+Scrivania+70",
-    "dopo": "https://placehold.co/800x600/22c55e/white?text=DOPO+Scrivania+70",
-    "immagini": ["https://placehold.co/800x600/22c55e/white?text=Scrivania+70+1", "https://placehold.co/800x600/22c55e/white?text=Scrivania+70+2"]
+    "prima": "https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?w=800&h=600&fit=crop",
+    "dopo": "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=800&h=600&fit=crop",
+    "immagini": ["https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=800&h=600&fit=crop", "https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?w=800&h=600&fit=crop"]
   },
   {
     "id": 2,
@@ -25,9 +25,9 @@
     "materiali": "Vernice bio neutra, carta vetrata fine, cera naturale",
     "co2_risparmiato": 18,
     "categoria": "Comò",
-    "prima": "https://placehold.co/800x600/57534e/white?text=PRIMA+Com%C3%B2+Vintage",
-    "dopo": "https://placehold.co/800x600/22c55e/white?text=DOPO+Com%C3%B2+Vintage",
-    "immagini": ["https://placehold.co/800x600/22c55e/white?text=Com%C3%B2+1", "https://placehold.co/800x600/22c55e/white?text=Com%C3%B2+2"]
+    "prima": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&h=600&fit=crop",
+    "dopo": "https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?w=800&h=600&fit=crop",
+    "immagini": ["https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?w=800&h=600&fit=crop", "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=800&h=600&fit=crop"]
   },
   {
     "id": 3,
@@ -40,9 +40,9 @@
     "materiali": "Olio naturale per legno, tintura noce",
     "co2_risparmiato": 22,
     "categoria": "Librerie",
-    "prima": "https://placehold.co/800x600/57534e/white?text=PRIMA+Libreria+50",
-    "dopo": "https://placehold.co/800x600/22c55e/white?text=DOPO+Libreria+50",
-    "immagini": ["https://placehold.co/800x600/22c55e/white?text=Libreria+1", "https://placehold.co/800x600/22c55e/white?text=Libreria+2"]
+    "prima": "https://images.unsplash.com/photo-1594620302200-9a762244a156?w=800&h=600&fit=crop",
+    "dopo": "https://images.unsplash.com/photo-1593079831268-33813b3f9c5e?w=800&h=600&fit=crop",
+    "immagini": ["https://images.unsplash.com/photo-1593079831268-33813b3f9c5e?w=800&h=600&fit=crop", "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&h=600&fit=crop"]
   },
   {
     "id": 4,
@@ -55,9 +55,9 @@
     "materiali": "Vernice laccata opaca, lucidatura marmo",
     "co2_risparmiato": 12,
     "categoria": "Tavolini",
-    "prima": "https://placehold.co/800x600/57534e/white?text=PRIMA+Tavolino+40",
-    "dopo": "https://placehold.co/800x600/22c55e/white?text=DOPO+Tavolino+40",
-    "immagini": ["https://placehold.co/800x600/22c55e/white?text=Tavolino+1", "https://placehold.co/800x600/22c55e/white?text=Tavolino+2"]
+    "prima": "https://images.unsplash.com/photo-1532372320572-cda25653a26d?w=800&h=600&fit=crop",
+    "dopo": "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=800&h=600&fit=crop",
+    "immagini": ["https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=800&h=600&fit=crop", "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&h=600&fit=crop"]
   },
   {
     "id": 5,
@@ -70,8 +70,8 @@
     "materiali": "Vernice ecologica bianca, ferramenta in ottone",
     "co2_risparmiato": 35,
     "categoria": "Armadi",
-    "prima": "https://placehold.co/800x600/57534e/white?text=PRIMA+Armadio+60",
-    "dopo": "https://placehold.co/800x600/22c55e/white?text=DOPO+Armadio+60",
-    "immagini": ["https://placehold.co/800x600/22c55e/white?text=Armadio+1", "https://placehold.co/800x600/22c55e/white?text=Armadio+2"]
+    "prima": "https://images.unsplash.com/photo-1588046130717-0eb0c9a3ba15?w=800&h=600&fit=crop",
+    "dopo": "https://images.unsplash.com/photo-1558997519-83ea9252edf8?w=800&h=600&fit=crop",
+    "immagini": ["https://images.unsplash.com/photo-1558997519-83ea9252edf8?w=800&h=600&fit=crop", "https://images.unsplash.com/photo-1588046130717-0eb0c9a3ba15?w=800&h=600&fit=crop"]
   }
 ]

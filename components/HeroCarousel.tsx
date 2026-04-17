@@ -6,20 +6,20 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const slides = [
   {
-    before: "https://placehold.co/1920x1080/57534e/white?text=PRIMA+Scrivania+1970",
-    after: "https://placehold.co/1920x1080/22c55e/white?text=DOPO+Scrivania+1970",
+    before: "https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?w=1920&h=1080&fit=crop",
+    after: "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=1920&h=1080&fit=crop",
     title: 'Trasformazione',
     subtitle: 'Da mobile dimenticato a pezzo unico'
   },
   {
-    before: "https://placehold.co/1920x1080/57534e/white?text=PRIMA+Com%C3%B2+1960",
-    after: "https://placehold.co/1920x1080/22c55e/white?text=DOPO+Com%C3%B2+1960",
+    before: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1920&h=1080&fit=crop",
+    after: "https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?w=1920&h=1080&fit=crop",
     title: 'Rinascita',
     subtitle: 'Ogni mobile ha una storia da raccontare'
   },
   {
-    before: "https://placehold.co/1920x1080/57534e/white?text=PRIMA+Libreria+1950",
-    after: "https://placehold.co/1920x1080/22c55e/white?text=DOPO+Libreria+1950",
+    before: "https://images.unsplash.com/photo-1594620302200-9a762244a156?w=1920&h=1080&fit=crop",
+    after: "https://images.unsplash.com/photo-1593079831268-33813b3f9c5e?w=1920&h=1080&fit=crop",
     title: 'Sostenibilità',
     subtitle: 'Riduciamo l\'impatto ambientale insieme'
   }
