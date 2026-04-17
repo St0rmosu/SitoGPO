@@ -6,20 +6,20 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const slides = [
   {
-    before: "https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?w=1920&h=1080&fit=crop",
-    after: "https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=1920&h=1080&fit=crop",
+    before: products[0]?.prima || 'https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?w=1920&h=1080&fit=crop',
+    after: products[0]?.dopo || 'https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=1920&h=1080&fit=crop',
     title: 'Trasformazione',
     subtitle: 'Da mobile dimenticato a pezzo unico'
   },
   {
-    before: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=1920&h=1080&fit=crop",
-    after: "https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?w=1920&h=1080&fit=crop",
+    before: products[2]?.prima || 'https://images.unsplash.com/photo-1594620302200-9a762244a156?w=1920&h=1080&fit=crop',
+    after: products[2]?.dopo || 'https://images.unsplash.com/photo-1593079831268-33813b3f9c5e?w=1920&h=1080&fit=crop',
     title: 'Rinascita',
     subtitle: 'Ogni mobile ha una storia da raccontare'
   },
   {
-    before: "https://images.unsplash.com/photo-1594620302200-9a762244a156?w=1920&h=1080&fit=crop",
-    after: "https://images.unsplash.com/photo-1593079831268-33813b3f9c5e?w=1920&h=1080&fit=crop",
+    before: products[4]?.prima || 'https://images.unsplash.com/photo-1588046130717-0eb0c9a3ba15?w=1920&h=1080&fit=crop',
+    after: products[4]?.dopo || 'https://images.unsplash.com/photo-1558997519-83ea9252edf8?w=1920&h=1080&fit=crop',
     title: 'Sostenibilità',
     subtitle: 'Riduciamo l\'impatto ambientale insieme'
   }
