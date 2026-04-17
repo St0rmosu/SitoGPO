@@ -1,29 +1,57 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { motion } from 'framer-motion';
 import products from '@/lib/products.json';
 
-const slides = [
-  {
-    before: products[0]?.prima || 'https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?w=1920&h=1080&fit=crop',
-    after: products[0]?.dopo || 'https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=1920&h=1080&fit=crop',
-    title: 'Trasformazione',
-    subtitle: 'Da mobile dimenticato a pezzo unico'
-  },
-  {
-    before: products[2]?.prima || 'https://images.unsplash.com/photo-1594620302200-9a762244a156?w=1920&h=1080&fit=crop',
-    after: products[2]?.dopo || 'https://images.unsplash.com/photo-1593079831268-33813b3f9c5e?w=1920&h=1080&fit=crop',
-    title: 'Rinascita',
-    subtitle: 'Ogni mobile ha una storia da raccontare'
-  },
-  {
-    before: products[4]?.prima || 'https://images.unsplash.com/photo-1588046130717-0eb0c9a3ba15?w=1920&h=1080&fit=crop',
-    after: products[4]?.dopo || 'https://images.unsplash.com/photo-1558997519-83ea9252edf8?w=1920&h=1080&fit=crop',
-    title: 'Sostenibilità',
-    subtitle: 'Riduciamo l\'impatto ambientale insieme'
-  }
+export default function HeroCarousel() {
+  // Use first product for hero section
+  const heroProduct = products[0];
+  
+  return (
+    <section className="relative h-screen overflow-hidden bg-stone-900">
+      <div className="relative h-full">
+        <motion.img
+          src={heroProduct.dopo}
+          alt={heroProduct.nome}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
+      </div>
+
+      <div className="absolute inset-0 flex items-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+          <motion.div
+            initial={{ x: -50, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ delay: 0.3, duration: 0.6 }}
+            className="max-w-2xl"
+          >
+            <div className="flex items-center gap-3 mb-4">
+              <span className="px-4 py-1 bg-green-600 text-white text-sm font-medium rounded-full">
+                DOPO
+              </span>
+              <span className="text-white/80 text-sm">
+                Trasformazione sorprendente
+              </span>
+            </div>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+              Diamo una seconda vita ai mobili dimenticati
+            </h1>
+            <p className="text-xl text-white/90 mb-8">
+              Ogni pezzo ha una storia unica da raccontare
+            </p>
+            <button className="px-8 py-4 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-all hover:scale-105">
+              Scopri la Collezione
+            </button>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+}
 ];
 
 export default function HeroCarousel() {
