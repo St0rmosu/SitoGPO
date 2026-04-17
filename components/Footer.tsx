@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Leaf, Mail, Phone, MapPin, Instagram, Twitter } from 'lucide-react';
+import { Leaf, Mail, Phone, MapPin, Twitter } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -19,10 +19,10 @@ export default function Footer() {
             </p>
             <div className="flex gap-4">
               <a href="#" className="hover:text-green-500 transition-colors">
-                <Instagram className="w-5 h-5" />
+                <Twitter className="w-5 h-5" />
               </a>
               <a href="#" className="hover:text-green-500 transition-colors">
-                <Twitter className="w-5 h-5" />
+                <Mail className="w-5 h-5" />
               </a>
             </div>
           </div>
