@@ -1,7 +1,8 @@
 'use client';
 
 import Link from 'next/link';
-import { Leaf, Mail, Phone, MapPin, Twitter } from 'lucide-react';
+import { Leaf, Mail, Phone, MapPin } from 'lucide-react';
+import { FaTwitter, FaInstagram, FaEnvelope } from 'react-icons/fa';
 
 export default function Footer() {
   return (
@@ -19,10 +20,10 @@ export default function Footer() {
             </p>
             <div className="flex gap-4">
               <a href="#" className="hover:text-green-500 transition-colors">
-                <Twitter className="w-5 h-5" />
+                <FaTwitter className="w-5 h-5" />
               </a>
               <a href="#" className="hover:text-green-500 transition-colors">
-                <Mail className="w-5 h-5" />
+                <FaInstagram className="w-5 h-5" />
               </a>
             </div>
           </div>
