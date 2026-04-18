@@ -8,8 +8,8 @@ export default function Footer() {
   return (
     <footer className="bg-midnight text-cream">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-8">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8">
-          <div className="md:col-span-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+          <div>
             <Link href="/" className="flex items-center gap-2 mb-3">
               <div className="w-8 h-8 rounded-full bg-terracotta/20 flex items-center justify-center">
                 <Hammer className="w-4 h-4 text-terracotta-light" />
@@ -31,17 +31,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="md:col-span-4">
-            <h4 className="text-cream font-serif font-semibold mb-3 text-sm">Esplora</h4>
-            <ul className="space-y-1.5">
-              <li><Link href="/shop" className="text-cream/80 hover:text-terracotta transition-colors text-sm">Collezione</Link></li>
-              <li><Link href="/processo" className="text-cream/80 hover:text-terracotta transition-colors text-sm">Il Nostro Processo</Link></li>
-              <li><Link href="/su-misura" className="text-cream/80 hover:text-terracotta transition-colors text-sm">Servizio Su Misura</Link></li>
-              <li><Link href="/sostenibilita" className="text-cream/80 hover:text-terracotta transition-colors text-sm">Sostenibilità</Link></li>
-            </ul>
-          </div>
-
-          <div className="md:col-span-4">
+          <div>
             <h4 className="text-cream font-serif font-semibold mb-3 text-sm">Contatti</h4>
             <ul className="space-y-1.5">
               <li className="flex items-center gap-2">

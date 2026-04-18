@@ -19,7 +19,7 @@ export default function Shop() {
   return (
     <div className="min-h-screen">
       <div className="relative">
-        <div className="absolute top-0 left-0 right-0 h-20 bg-gradient-to-b from-cream to-transparent pointer-events-none z-10" />
+        <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-cream to-transparent pointer-events-none z-10" />
         
         <section className="relative bg-midnight py-20 md:py-24 overflow-hidden">
           <div className="absolute inset-0 opacity-10">

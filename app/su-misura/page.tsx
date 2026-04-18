@@ -126,9 +126,10 @@ export default function SuMisura() {
               className="text-center mb-10 md:mb-16"
             >
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif font-semibold mb-3 md:mb-4">Come Funziona</h2>
+              <p className="text-cream/60 text-sm md:text-base max-w-lg mx-auto">Dalla tua idea al mobile rigenerato in 4 semplici passi</p>
             </motion.div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
               {steps.map((step, index) => (
                 <motion.div
                   key={step.number}
@@ -136,13 +137,18 @@ export default function SuMisura() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="text-center"
+                  className="relative"
                 >
-                  <div className="w-12 md:w-14 h-12 md:h-14 mx-auto mb-3 md:mb-4 rounded-full bg-terracotta/20 flex items-center justify-center text-lg md:text-xl font-semibold text-terracotta">
-                    {step.number}
+                  <div className="bg-midnight/50 rounded-2xl p-4 md:p-6 border border-cream/10 hover:border-terracotta/30 transition-colors h-full">
+                    <div className="w-10 md:w-12 h-10 md:h-12 mb-3 md:mb-4 rounded-full bg-terracotta/20 flex items-center justify-center text-lg font-semibold text-terracotta">
+                      {step.number}
+                    </div>
+                    <h3 className="font-serif font-semibold mb-1 md:mb-2 text-sm md:text-base">{step.title}</h3>
+                    <p className="text-cream/50 text-xs md:text-sm">{step.description}</p>
                   </div>
-                  <h3 className="font-serif font-semibold mb-1 md:mb-2 text-sm md:text-base">{step.title}</h3>
-                  <p className="text-cream/50 text-xs md:text-sm">{step.description}</p>
+                  {index < steps.length - 1 && (
+                    <div className="hidden md:block absolute top-1/2 -right-3 w-6 h-0.5 bg-cream/20" />
+                  )}
                 </motion.div>
               ))}
             </div>

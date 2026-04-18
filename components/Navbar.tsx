@@ -18,19 +18,14 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <motion.nav 
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
-      className="fixed top-0 left-0 right-0 z-50 bg-cream/90 backdrop-blur-lg border-b border-sand/20"
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
-          <Link href="/" className="flex items-center gap-2 md:gap-3 group">
-            <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-terracotta/10 flex items-center justify-center group-hover:bg-terracotta/20 transition-colors">
-              <Hammer className="w-4 h-4 md:w-5 md:h-5 text-terracotta" />
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-cream border-b border-sand/30">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="flex justify-between items-center h-14">
+          <Link href="/" className="flex items-center gap-2 group">
+            <div className="w-8 h-8 rounded-full bg-terracotta/10 flex items-center justify-center group-hover:bg-terracotta/20 transition-colors">
+              <Hammer className="w-4 h-4 text-terracotta" />
             </div>
-            <span className="text-lg md:text-2xl font-serif font-semibold text-midnight tracking-tight">
+            <span className="text-base font-serif font-semibold text-midnight">
               L&apos;Impatto Visivo
             </span>
           </Link>
@@ -40,7 +35,7 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="px-4 py-2 text-midnight/80 hover:text-terracotta transition-colors font-sans text-sm font-medium rounded-lg hover:bg-terracotta/5"
+                className="px-3 py-2 text-sm text-midnight/80 hover:text-terracotta transition-colors font-medium"
               >
                 {link.label}
               </Link>
@@ -49,10 +44,10 @@ export default function Navbar() {
 
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 text-midnight/80 hover:text-terracotta transition-colors"
+            className="md:hidden p-2 text-midnight"
             aria-label="Menu"
           >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
           </button>
         </div>
       </div>
@@ -63,15 +58,16 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-cream-dark/50 border-t border-sand/20"
+            transition={{ duration: 0.2 }}
+            className="md:hidden border-t border-sand/20"
           >
-            <div className="px-4 py-6 space-y-2">
+            <div className="px-4 pb-4 space-y-1">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
-                  className="block text-midnight/80 hover:text-terracotta transition-colors font-sans font-medium py-3 px-4 rounded-lg hover:bg-terracotta/5"
+                  className="block text-midnight hover:text-terracotta font-medium py-2"
                 >
                   {link.label}
                 </Link>
@@ -80,6 +76,6 @@ export default function Navbar() {
           </motion.div>
         )}
       </AnimatePresence>
-    </motion.nav>
+    </nav>
   );
 }
