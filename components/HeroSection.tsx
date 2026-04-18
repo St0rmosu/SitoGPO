@@ -2,8 +2,8 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { ArrowRight, Hammer } from 'lucide-react';
-import { FaLeaf } from 'react-icons/fa';
+import { ArrowRight } from 'lucide-react';
+import { FaCouch, FaLeaf } from 'react-icons/fa';
 
 export default function HeroSection() {
   return (
@@ -22,7 +22,7 @@ export default function HeroSection() {
             transition={{ duration: 0.7, ease: "easeOut" }}
           >
             <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-terracotta/10 rounded-full mb-3 md:mb-6">
-              <Hammer className="w-3.5 h-3.5 text-terracotta" />
+              <FaCouch className="w-4 h-4 text-terracotta" />
               <span className="text-xs md:text-sm font-medium text-terracotta">Restauro Artigianale</span>
             </div>
             

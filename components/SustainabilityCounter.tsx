@@ -4,22 +4,20 @@ import { useEffect, useState, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 
 const stats = [
-  { value: 127, label: 'Mobili Salvati', sublabel: 'dalla discarica' },
-  { value: 2700, label: 'kg CO₂', sublabel: 'risparmiato' },
-  { value: 850, label: 'kg Legno', sublabel: 'recuperato' },
-  { value: 120, label: 'Litri Vernice', sublabel: 'bio usata' },
+  { value: 84, max: 100, label: 'Mobili Salvati', sublabel: 'dalla discarica' },
+  { value: 1850, max: 2500, label: 'kg CO₂', sublabel: 'risparmiato' },
+  { value: 420, max: 500, label: 'kg Legno', sublabel: 'recuperato' },
+  { value: 65, max: 100, label: 'Litri Vernice', sublabel: 'bio usata' },
 ];
 
-interface CounterProps {
-  value: number;
-  label: string;
-  sublabel: string;
-  inView: boolean;
-  color: string;
-}
+const colors = ['#B86B4A', '#6B8A69', '#8B7355', '#1E2A35'];
 
-function Counter({ value, label, sublabel, inView, color }: CounterProps) {
+function DonutChart({ value, max, label, sublabel, color, inView }: { value: number; max: number; label: string; sublabel: string; color: string; inView: boolean }) {
   const [count, setCount] = useState(0);
+  const percentage = (value / max) * 100;
+  const radius = 45;
+  const circumference = 2 * Math.PI * radius;
+  const offset = circumference - (percentage / 100) * circumference;
 
   useEffect(() => {
     if (inView) {
@@ -43,39 +41,38 @@ function Counter({ value, label, sublabel, inView, color }: CounterProps) {
   }, [inView, value]);
 
   return (
-    <div className="text-center">
-      <div className="relative inline-flex">
-        <div className="text-4xl md:text-5xl font-serif font-bold text-midnight">
-          {count.toLocaleString()}
+    <div className="flex flex-col items-center">
+      <div className="relative w-32 h-32">
+        <svg className="w-full h-full -rotate-90" viewBox="0 0 100 100">
+          <circle
+            cx="50"
+            cy="50"
+            r={radius}
+            fill="none"
+            stroke="#E8E0D5"
+            strokeWidth="8"
+          />
+          <motion.circle
+            cx="50"
+            cy="50"
+            r={radius}
+            fill="none"
+            stroke={color}
+            strokeWidth="8"
+            strokeLinecap="round"
+            strokeDasharray={circumference}
+            initial={{ strokeDashoffset: circumference }}
+            animate={inView ? { strokeDashoffset: offset } : {}}
+            transition={{ duration: 1.5, ease: 'easeOut' }}
+          />
+        </svg>
+        <div className="absolute inset-0 flex flex-col items-center justify-center">
+          <span className="text-2xl font-serif font-bold text-midnight">{count}</span>
         </div>
-        <div 
-          className="absolute -right-6 top-1/2 -translate-y-1/2 w-2 h-2 rounded-full"
-          style={{ backgroundColor: color }}
-        />
       </div>
-      <div className="text-midnight font-medium mt-1">{label}</div>
-      <div className="text-midnight/50 text-sm">{sublabel}</div>
-    </div>
-  );
-}
-
-function StatBar({ value, max, label, color, inView }: { value: number; max: number; label: string; color: string; inView: boolean }) {
-  const percentage = (value / max) * 100;
-  
-  return (
-    <div className="space-y-2">
-      <div className="flex justify-between text-sm">
-        <span className="text-midnight/70">{label}</span>
-        <span className="text-midnight font-medium">{value.toLocaleString()}</span>
-      </div>
-      <div className="h-2 bg-cream-dark rounded-full overflow-hidden">
-        <motion.div
-          initial={{ width: 0 }}
-          animate={inView ? { width: `${percentage}%` } : {}}
-          transition={{ duration: 1.5, ease: 'easeOut' }}
-          className="h-full rounded-full"
-          style={{ backgroundColor: color }}
-        />
+      <div className="text-center mt-3">
+        <div className="text-midnight font-medium">{label}</div>
+        <div className="text-midnight/50 text-sm">{sublabel}</div>
       </div>
     </div>
   );
@@ -85,31 +82,16 @@ export default function SustainabilityCounter() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
-  const colors = ['#B86B4A', '#6B8A69', '#9A7B5C', '#1E2A35'];
-  const maxValues = [150, 3000, 1000, 150];
-
   return (
     <div ref={ref}>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mb-10 md:mb-12">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
         {stats.map((stat, index) => (
-          <Counter 
-            key={stat.label} 
-            value={stat.value} 
-            label={stat.label}
-            sublabel={stat.sublabel}
-            inView={isInView}
-            color={colors[index]}
-          />
-        ))}
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-2xl mx-auto">
-        {stats.map((stat, index) => (
-          <StatBar 
+          <DonutChart 
             key={stat.label}
             value={stat.value}
-            max={maxValues[index]}
+            max={stat.max}
             label={stat.label}
+            sublabel={stat.sublabel}
             color={colors[index]}
             inView={isInView}
           />
