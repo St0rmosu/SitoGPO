@@ -44,7 +44,7 @@ export default function Sostenibilita() {
       <div className="relative">
         <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-cream to-sage pointer-events-none" />
         
-        <section className="bg-sage text-cream py-20 md:py-20">
+        <section className="bg-sage text-cream py-21 md:py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
