@@ -25,9 +25,9 @@
     "materiali": "Olio di lino naturale, cera d'api",
     "co2_risparmiato": 45,
     "categoria": "Tavoli",
-    "prima": "https://images.unsplash.com/photo-1617806118233-18e1de247200?w=800&h=600&fit=crop",
-    "dopo": "https://vintage-shop.it/214216-large_default/ANTICO-GRANDE-TAVOLO-epoca-1600-LEGNO-NOCE-GAMBA-QUADRA-SALA-PRANZO-TABLE-OLD.jpg",
-    "immagini": ["https://vintage-shop.it/214216-large_default/ANTICO-GRANDE-TAVOLO-epoca-1600-LEGNO-NOCE-GAMBA-QUADRA-SALA-PRANZO-TABLE-OLD.jpg"]
+    "prima": "https://vintage-shop.it/214216-large_default/ANTICO-GRANDE-TAVOLO-epoca-1600-LEGNO-NOCE-GAMBA-QUADRA-SALA-PRANZO-TABLE-OLD.jpg",
+    "dopo": "https://images.unsplash.com/photo-1617806118233-18e1de247200?w=800&h=600&fit=crop",
+    "immagini": ["https://images.unsplash.com/photo-1617806118233-18e1de247200?w=800&h=600&fit=crop"]
   },
   {
     "id": 8,
