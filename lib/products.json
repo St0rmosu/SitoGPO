@@ -1,20 +1,5 @@
 [
   {
-    "id": 1,
-    "nome": "Scrivania Anni '70",
-    "slug": "scrivania-anni-70",
-    "descrizione": "Elegante scrivania degli anni '70 recuperata a Milano. Struttura in legno massello con venature naturali.",
-    "prezzo": 450,
-    "misure": "120x60x75 cm",
-    "provenienza": "Milano, Italia",
-    "materiali": "Vernice ecologica all'acqua",
-    "co2_risparmiato": 25,
-    "categoria": "Scrivanie",
-    "prima": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=600&fit=crop",
-    "dopo": "https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?w=800&h=600&fit=crop",
-    "immagini": ["https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?w=800&h=600&fit=crop"]
-  },
-  {
     "id": 2,
     "nome": "Comò Vintage",
     "slug": "como-vintage",
@@ -30,51 +15,6 @@
     "immagini": ["https://images.unsplash.com/photo-1558997519-83ea9252edf8?w=800&h=600&fit=crop"]
   },
   {
-    "id": 3,
-    "nome": "Libreria Mid-Century",
-    "slug": "libreria-mid-century",
-    "descrizione": "Libreria vintage degli anni '50 in teak. Struttura a tre ripiani.",
-    "prezzo": 520,
-    "misure": "90x35x180 cm",
-    "provenienza": "Firenze, Italia",
-    "materiali": "Olio naturale per legno",
-    "co2_risparmiato": 22,
-    "categoria": "Librerie",
-    "prima": "https://images.unsplash.com/photo-1594620302200-9a762244a156?w=800&h=600&fit=crop",
-    "dopo": "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=800&h=600&fit=crop",
-    "immagini": ["https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=800&h=600&fit=crop"]
-  },
-  {
-    "id": 4,
-    "nome": "Tavolino d'Epoca",
-    "slug": "tavolino-epoca",
-    "descrizione": "Tavolino da salotto anni '40 in stile Art Déco.",
-    "prezzo": 290,
-    "misure": "60x60x45 cm",
-    "provenienza": "Roma, Italia",
-    "materiali": "Vernice laccata opaca",
-    "co2_risparmiato": 12,
-    "categoria": "Tavolini",
-    "prima": "https://images.unsplash.com/photo-1532372320572-cda25653a26d?w=800&h=600&fit=crop",
-    "dopo": "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=800&h=600&fit=crop",
-    "immagini": ["https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=800&h=600&fit=crop"]
-  },
-  {
-    "id": 5,
-    "nome": "Armadio Anni '60",
-    "slug": "armadio-anni-60",
-    "descrizione": "Armadio a due ante degli anni '60 con specchio originale.",
-    "prezzo": 580,
-    "misure": "140x60x200 cm",
-    "provenienza": "Napoli, Italia",
-    "materiali": "Vernice ecologica bianca",
-    "co2_risparmiato": 35,
-    "categoria": "Armadi",
-    "prima": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&h=600&fit=crop",
-    "dopo": "https://images.unsplash.com/photo-1588046130717-0eb0c9a3ba15?w=800&h=600&fit=crop",
-    "immagini": ["https://images.unsplash.com/photo-1588046130717-0eb0c9a3ba15?w=800&h=600&fit=crop"]
-  },
-  {
     "id": 6,
     "nome": "Tavolo da Pranzo",
     "slug": "tavolo-pranzo-rustico",
@@ -88,21 +28,6 @@
     "prima": "https://images.unsplash.com/photo-1617806118233-18e1de247200?w=800&h=600&fit=crop",
     "dopo": "https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=800&h=600&fit=crop",
     "immagini": ["https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=800&h=600&fit=crop"]
-  },
-  {
-    "id": 7,
-    "nome": "Poltrona Chesterfield",
-    "slug": "poltrona-chesterfield",
-    "descrizione": "Poltrona Chesterfield originale degli anni '40 in pelle pieno fiore.",
-    "prezzo": 420,
-    "misure": "85x85x90 cm",
-    "provenienza": "Londra, UK",
-    "materiali": "Pelle rigenerata",
-    "co2_risparmiato": 15,
-    "categoria": "Poltrone",
-    "prima": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&h=600&fit=crop",
-    "dopo": "https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?w=800&h=600&fit=crop",
-    "immagini": ["https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?w=800&h=600&fit=crop"]
   },
   {
     "id": 8,
