@@ -37,7 +37,7 @@ export default function Navbar() {
         <div className={`flex items-center justify-between gap-3 ${colors.bg} border ${colors.border} rounded-full shadow-lg px-4 py-3`}>
           <Link href="/" className="flex items-center gap-2">
             <FaCouch className={`w-5 h-5 ${colors.icon} flex-shrink-0`} />
-            <span className={`text-sm font-serif font-semibold ${colors.text}`}>L'Impatto Visivo</span>
+            <span className={`text-sm font-serif font-semibold ${colors.text}`}>Re-Life</span>
           </Link>
 
           <button
@@ -92,7 +92,7 @@ export default function Navbar() {
         <div className={`flex items-center gap-1 ${colors.bg} border ${colors.border} rounded-full shadow-lg px-2 py-1.5`}>
           <Link href="/" className={`flex items-center gap-2 px-2 py-1.5 group rounded-full hover:bg-black/5 transition-colors ${colors.text}`}>
             <FaCouch className={`w-4 h-4 ${colors.icon}`} />
-            <span className={`text-sm font-serif font-semibold ${colors.text}`}>L'Impatto Visivo</span>
+            <span className={`text-sm font-serif font-semibold ${colors.text}`}>Re-Life</span>
           </Link>
 
           <div className="flex items-center gap-0.5">

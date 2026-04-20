@@ -16,7 +16,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "L'Impatto Visivo - Mobili Rigenerati",
+  title: "Re-Life - Mobili Rigenerati",
   description: "Diamo una seconda vita ai mobili dimenticati, riducendo l'impatto ambientale. Scopri la nostra collezione di pezzi unici.",
 };
 
