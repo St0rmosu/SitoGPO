@@ -88,21 +88,21 @@ export default function Navbar() {
         )}
       </AnimatePresence>
 
-      <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-50 hidden md:flex">
-        <div className={`flex items-center gap-2 ${colors.bg} border ${colors.border} rounded-full shadow-lg px-4 py-3`}>
-          <Link href="/" className={`flex items-center gap-2 px-3 py-2 group rounded-full hover:bg-black/5 transition-colors ${colors.text}`}>
-            <FaCouch className={`w-5 h-5 ${colors.icon}`} />
-            <span className={`text-base font-serif font-semibold ${colors.text}`}>Re-Life</span>
+      <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-50 hidden lg:flex">
+        <div className={`flex items-center gap-1 ${colors.bg} border ${colors.border} rounded-full shadow-lg px-3 py-2`}>
+          <Link href="/" className={`flex items-center gap-1.5 px-2 py-1.5 group rounded-full hover:bg-black/5 transition-colors ${colors.text}`}>
+            <FaCouch className={`w-4 h-4 ${colors.icon}`} />
+            <span className={`text-sm font-serif font-semibold ${colors.text}`}>Re-Life</span>
           </Link>
 
-          <div className="flex items-center gap-1">
+          <div className="flex items-center gap-0.5">
             {navLinks.map((link) => {
               const isActive = pathname === link.href;
               return (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`relative px-4 py-2 text-base font-medium transition-colors rounded-full ${
+                  className={`relative px-3 py-1.5 text-sm font-medium transition-colors rounded-full ${
                     isActive ? colors.activeText : colors.text
                   }`}
                 >
