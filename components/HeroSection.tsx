@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Recycle } from 'lucide-react';
 import { FaCouch, FaLeaf } from 'react-icons/fa';
 
 export default function HeroSection() {
@@ -21,9 +21,9 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-terracotta/10 rounded-full mb-4 md:mb-6">
-              <FaCouch className="w-5 h-5 text-terracotta" />
-              <span className="text-sm font-medium text-terracotta">Restauro Artigianale</span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-sage/20 rounded-full mb-4 md:mb-6">
+              <Recycle className="w-5 h-5 text-sage" />
+              <span className="text-sm font-medium text-sage">Rigeneriamo mobili, risparmiamo CO₂, riduciamo sprechi</span>
             </div>
             
             <h1 className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl font-serif font-semibold text-midnight leading-[1.15] mb-4 md:mb-6">
@@ -69,14 +69,14 @@ export default function HeroSection() {
                 <div className="absolute inset-0 bg-gradient-to-t from-midnight/20 to-transparent" />
               </div>
               
-              <div className="absolute -bottom-3 -left-2 lg:-bottom-6 lg:-left-6 bg-cream p-3 lg:p-6 rounded-xl lg:rounded-2xl shadow-lg lg:shadow-xl w-40 lg:w-auto">
-                <div className="flex items-center gap-2 lg:gap-4">
-                  <div className="w-8 lg:w-12 rounded-full bg-sage/20 flex items-center justify-center">
-                    <FaLeaf className="text-sage text-sm lg:text-lg" />
+              <div className="absolute -bottom-3 -left-2 lg:-bottom-6 lg:-left-6 bg-sage text-cream p-3 lg:p-5 rounded-xl lg:rounded-2xl shadow-lg lg:shadow-xl">
+                <div className="flex items-center gap-2 lg:gap-3">
+                  <div className="w-10 lg:w-14 rounded-full bg-white/20 flex items-center justify-center">
+                    <FaLeaf className="text-cream text-sm lg:text-lg" />
                   </div>
                   <div>
-                    <p className="text-xs text-midnight/60">CO₂ risparmiato</p>
-                    <p className="text-base lg:text-xl font-serif font-semibold text-midnight">270 kg</p>
+                    <p className="text-xs text-cream/80 font-medium">Riduciamo 10kg CO₂</p>
+                    <p className="text-base lg:text-xl font-serif font-semibold text-cream">per mobile</p>
                   </div>
                 </div>
               </div>
