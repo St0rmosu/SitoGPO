@@ -90,8 +90,9 @@ export default function Navbar() {
 
       <nav className="fixed top-4 left-1/2 -translate-x-1/2 z-50 hidden lg:flex">
         <div className={`flex items-center gap-1 ${colors.bg} border ${colors.border} rounded-full shadow-lg px-3 py-2`}>
-          <Link href="/" className={`flex items-center gap-1.5 px-3 py-1.5 group rounded-full hover:bg-black/5 transition-colors ${colors.text}`}>
-            <span className={`text-base font-serif font-semibold tracking-wide ${colors.text}`}>Re-Life</span>
+          <Link href="/" className={`flex items-center gap-1.5 px-2 py-1.5 group rounded-full hover:bg-black/5 transition-colors ${colors.text}`}>
+            <FaCouch className={`w-4 h-4 ${colors.icon}`} />
+            <span className={`text-sm font-serif font-semibold ${colors.text}`}>Re-Life</span>
           </Link>
 
           <div className="flex items-center gap-0.5">
