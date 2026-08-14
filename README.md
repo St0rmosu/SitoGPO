@@ -148,12 +148,6 @@ Risposta: array di oggetti `product` con i campi della tabella `products`. Le pa
 - **Form di contatto front-end only**: il form è validato lato client ma non invia dati a un backend; scelta temporanea in attesa di un endpoint di submit.
 - **No autenticazione/carrello**: la piattaforma è attualmente vetrina/showcase; carrello, ordini e utenti sono fuori scope per questa versione.
 
-## Testing
-
-- `npm run lint` — lint ESLint con `eslint-config-next`.
-- `npm run build` — build di produzione che valida routing e tipi.
-- Test manuali: navigazione completa, filtri catalogo, toggle prima/dopo, responsive (mobile/desktop).
-
 ## Limitations & Future Improvements
 
 - I dati dei prodotti sono statici: collegare le pagine all'API `/api/products` per un catalogo gestito da CMS.
