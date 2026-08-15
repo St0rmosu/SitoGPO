@@ -21,17 +21,13 @@
 
 ## Tech Stack
 
-| Tecnologia | Ruolo |
-|---|---|
-| Next.js 16 (App Router) | Framework full-stack, routing e rendering |
-| React 19 | UI component-based, client components con animazioni |
-| TypeScript 5 | Tipizzazione statica |
-| Tailwind CSS v4 | Styling CSS-first con palette custom |
-| Framer Motion | Animazioni di scroll, reveal e transizioni |
-| lucide-react / react-icons | Iconografia |
-| Supabase (PostgreSQL) | Database e API (`products`) |
-| @vercel/postgres | Connettore PostgreSQL per Vercel (scaffolding) |
-| Vercel | Deployment e hosting |
+- **Next.js 16 & React 19** — Framework full-stack con App Router e Server/Client Components
+- **TypeScript 5** — Tipizzazione statica per massima affidabilità
+- **Tailwind CSS v4** — Styling moderno con palette colori custom
+- **Framer Motion** — Animazioni fluide di scroll, reveal e transizioni di pagina
+- **Supabase (PostgreSQL)** — Database cloud e gestione catalogo prodotti
+- **Lucide Icons** — Iconografia moderna e minimale
+- **Vercel** — Piattaforma di hosting e deployment continuo
 
 ## Architettura
 
