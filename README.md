@@ -122,9 +122,7 @@ Database: applicare `SCHEMA.sql` per creare la tabella `products` (id, nome, slu
 
 ## Screenshots / Demo
 
-Demo live: [sitogpo.vercel.app](https://sitogpo.vercel.app)
-
-> Inserire qui screenshot delle pagine principali (es. `public/screenshots/home.png`).
+Demo live disponibile su: [sitogpo.vercel.app](https://sitogpo.vercel.app)
 
 ## API Documentation
 
