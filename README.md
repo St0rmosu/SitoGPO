@@ -33,34 +33,19 @@
 
 Applicazione Next.js **App Router**: ogni pagina è un client component, i dati provengono da file JSON statici in `lib/`, mentre il database Supabase è collegato ma non ancora consumato dalle pagine:
 
-```
-                    ┌───────────────────────────────────────────┐
-                    │                Next.js App                │
-                    │  app/  (routing + layout + metadata)      │
-                    └──────┬────────────────────────────────────┘
-                           │
-        ┌──────────────────┼───────────────────────────────────────┐
-        ▼                  ▼                  ▼                     ▼
-  ┌────────────┐    ┌────────────┐     ┌────────────┐       ┌──────────────┐
-  │  /         │    │  /shop     │     │ /processo  │       │ /sostenibilita│
-  │  home      │    │ /shop/[slug]│    │ timeline   │       │ impatto      │
-  └────────────┘    └────────────┘     └────────────┘       └──────────────┘
-        │                  │                                       │
-        ▼                  ▼                                       ▼
-  ┌─────────────────────────────────────────────────────────────────────┐
-  │                       components/  (client)                          │
-  │  Navbar · Footer · HeroSection · HeroCarousel · ChiSiamo · Logistica │
-  │  ProcessTimeline · ProductCard · SustainabilityCounter · ContactForm │
-  └───────────────┬──────────────────────────────────────────────────────┘
-                  │
-        ┌─────────┴──────────┐
-        ▼                    ▼
-  ┌───────────────┐   ┌───────────────┐        ┌──────────────────┐
-  │  lib/ (JSON)  │   │ lib/supabase  │───────►│    Supabase      │
-  │  products     │   │ /api/products │  GET   │    (products)    │
-  │  process      │   └───────────────┘        └──────────────────┘
-  │  stats/home   │
-  └───────────────┘
+```mermaid
+flowchart TD
+    A["Next.js App<br/>app/ (routing + layout + metadata)"] --> B["/ (home)"]
+    A --> C["/shop<br/>/shop/[slug]"]
+    A --> D["/processo (timeline)"]
+    A --> E["/sostenibilita (impatto)"]
+    B --> F[components/ client]
+    C --> F
+    D --> F
+    E --> F
+    F --> G[lib/ JSON]
+    F --> H[lib/supabase<br/>/api/products]
+    H -->|GET| I[Supabase products]
 ```
 
 ## Struttura del progetto
