@@ -1,4 +1,4 @@
-# RE-LIFE — Piattaforma e-commerce per mobili rigenerati
+# RE-LIFE: piattaforma e-commerce per mobili rigenerati
 
 [![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
@@ -7,27 +7,27 @@
 [![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)](https://supabase.com/)
 [![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
 
-**RE-LIFE** è la piattaforma web ufficiale di una startup dedicata all'**upcycling di mobili**: pezzi usati vengono rigenerati, rivenduti e consegnati con un occhio alla sostenibilità. Il sito presenta il catalogo di mobili restaurati con foto "prima/dopo", racconta il processo di rigenerazione e la sostenibilità, e permette di richiedere informazioni sui singoli pezzi o un servizio su misura.
+**RE-LIFE** è la piattaforma web di una startup dedicata all'upcycling di mobili: pezzi usati vengono rigenerati, rivenduti e consegnati con un occhio alla sostenibilità. Il sito presenta il catalogo di mobili restaurati con foto "prima/dopo", racconta il processo di rigenerazione e la sostenibilità, e permette di richiedere informazioni sui singoli pezzi o un servizio su misura.
 
 ## Caratteristiche
 
 - **Catalogo e-commerce**: vetrina dei prodotti con filtri per categoria, card animate e pagina di dettaglio.
-- **Confronto prima/dopo**: nel dettaglio prodotto, toggle per confrontare foto "prima" e "dopo", con badge (Eco-Friendly, Artigianato, Restaurato), specifiche (provenienza, misure, materiali) e CO₂ risparmiata.
-- **Storytelling del processo**: timeline a 5 passi del processo di rigenerazione e contatori impatto.
+- **Confronto prima/dopo**: nel dettaglio prodotto, toggle per confrontare le foto, con badge (Eco-Friendly, Artigianato, Restaurato), specifiche (provenienza, misure, materiali) e CO₂ risparmiata.
+- **Storytelling del processo**: timeline a 5 passi della rigenerazione e contatori di impatto.
 - **Pagina sostenibilità**: contatori di impatto, iniziative, certificazioni e grafici donut animati in SVG.
 - **Logistica**: zone e prezzi di consegna per l'Italia, packaging ecosostenibile e guida alla consegna.
-- **Servizio su misura**: form di contatto dedicato a privati e aziende con workflow in 4 passi.
+- **Servizio su misura**: form di contatto per privati e aziende con workflow in 4 passi.
 - **Temi per pagina**: la Navbar assume palette di colori diverse in base alla sezione, con design system Tailwind v4 personalizzato (palette crema/terracotta/sage/mezzanotte).
 
-## Tech Stack
+## Tech stack
 
-- **Next.js 16 & React 19** — Framework full-stack con App Router e Server/Client Components
-- **TypeScript 5** — Tipizzazione statica per massima affidabilità
-- **Tailwind CSS v4** — Styling moderno con palette colori custom
-- **Framer Motion** — Animazioni fluide di scroll, reveal e transizioni di pagina
-- **Supabase (PostgreSQL)** — Database cloud e gestione catalogo prodotti
-- **Lucide Icons** — Iconografia moderna e minimale
-- **Vercel** — Piattaforma di hosting e deployment continuo
+- **Next.js 16 & React 19** — framework full-stack con App Router e Server/Client Components
+- **TypeScript 5** — tipizzazione statica
+- **Tailwind CSS v4** — styling con palette colori custom
+- **Framer Motion** — animazioni di scroll, reveal e transizioni di pagina
+- **Supabase (PostgreSQL)** — database cloud e gestione catalogo prodotti
+- **Lucide Icons** — iconografia
+- **Vercel** — hosting e deployment continuo
 
 ## Architettura
 
@@ -63,7 +63,7 @@ Applicazione Next.js **App Router**: ogni pagina è un client component, i dati 
   └───────────────┘
 ```
 
-## Project Structure
+## Struttura del progetto
 
 ```
 sitogpo/
@@ -91,7 +91,7 @@ sitogpo/
 └── package.json
 ```
 
-## Installation & Setup
+## Installazione e setup
 
 Prerequisiti: Node.js 20+ e npm.
 
@@ -111,7 +111,7 @@ Variabili d'ambiente (per l'integrazione Supabase/API; il sito funziona anche so
 
 Database: applicare `SCHEMA.sql` per creare la tabella `products` (id, nome, slug, descrizione, prezzo, misure, provenienza, materiali, co2_risparmiato, categoria, prima, dopo, immagini).
 
-## Usage
+## Uso
 
 1. Avvia il server di sviluppo e visita `http://localhost:3000`.
 2. Esplora la home: hero, sezione logistica e "Chi siamo".
@@ -120,11 +120,11 @@ Database: applicare `SCHEMA.sql` per creare la tabella `products` (id, nome, slu
 5. Visita le pagine **Processo**, **Sostenibilità** e **Logistica** per il racconto dell'impatto.
 6. Usa **Su Misura** per il servizio custom (privati o aziende).
 
-## Screenshots / Demo
+## Demo
 
-Demo live disponibile su: [sitogpo.vercel.app](https://sitogpo.vercel.app)
+Demo live: [sitogpo.vercel.app](https://sitogpo.vercel.app)
 
-## API Documentation
+## Documentazione API
 
 Un solo endpoint è esposto (scaffolding, non ancora consumato dalle pagine):
 
@@ -132,25 +132,23 @@ Un solo endpoint è esposto (scaffolding, non ancora consumato dalle pagine):
 |---|---|---|
 | GET | `/api/products` | Restituisce tutti i prodotti dal database Supabase |
 
-Risposta: array di oggetti `product` con i campi della tabella `products`. Le pagine attualmente leggono `lib/products.json`; l'endpoint è il percorso previsto per passare da dati statici a dati da database.
+Risposta: array di oggetti `product` con i campi della tabella `products`. Le pagine leggono `lib/products.json`; l'endpoint è il percorso previsto per passare da dati statici a dati da database.
 
-## Engineering Decisions
+## Decisioni di engineering
 
-- **Dati JSON statici come default**: il catalogo vive in `lib/products.json`, rendendo il sito immediatamente deployabile senza servizi esterni. Il database Supabase e l'API route sono già predisposti ma non collegati: il passaggio al DB è un lavoro in corso (trade-off: semplicità vs. dinamicità).
-- **Client components con Framer Motion**: tutte le pagine sono client component per supportare animazioni fluide di scroll e reveal, a scapito della serializzazione SSR dei contenuti.
+- **Dati JSON statici come default**: il catalogo vive in `lib/products.json`, rendendo il sito deployabile senza servizi esterni. Supabase e l'API route sono predisposti ma non collegati: il passaggio al DB è un lavoro in corso.
+- **Client components con Framer Motion**: tutte le pagine sono client component per le animazioni di scroll e reveal, a scapito della serializzazione SSR dei contenuti.
 - **Design system CSS-first (Tailwind v4)**: palette e font definiti in CSS, con temi per pagina tramite la Navbar.
-- **Form di contatto front-end only**: il form è validato lato client ma non invia dati a un backend; scelta temporanea in attesa di un endpoint di submit.
-- **No autenticazione/carrello**: la piattaforma è attualmente vetrina/showcase; carrello, ordini e utenti sono fuori scope per questa versione.
+- **Form di contatto front-end only**: il form è validato lato client ma non invia dati a un backend; soluzione temporanea in attesa di un endpoint di submit.
+- **No autenticazione/carrello**: la piattaforma è attualmente vetrina; carrello, ordini e utenti sono fuori scope per questa versione.
 
-## Limitations & Future Improvements
+## Limiti e prossimi passi
 
 - I dati dei prodotti sono statici: collegare le pagine all'API `/api/products` per un catalogo gestito da CMS.
-- Form di contatto non invia dati a backend.
+- Il form di contatto non invia dati a backend.
 - Nessun carrello, checkout o autenticazione utente.
 - Nomi di dominio/brand discordanti (repo `sitogpo` vs brand "RE-LIFE" vs footer "L'Impatto Visivo"): uniformare l'identità.
-- Dipendenze non utilizzate presenti in `package.json` (`@chenglou/pretext`, `motion`, `clsx`, `tailwind-merge`): da ripulire.
-- Prossimi passi: integrazione completa Supabase, form funzionante, SEO/meta completi, modalità i18n (IT/EN).
+- Dipendenze inutilizzate in `package.json` (`@chenglou/pretext`, `motion`, `clsx`, `tailwind-merge`): da ripulire.
+- Prossimi passi: integrazione completa Supabase, form funzionante, SEO/meta completi, i18n (IT/EN).
 
----
-
-*Progetto GPO — Sviluppato da Lorenzo Recchia, Nicolò Mongelli e Federico Marasciulo.*
+*Progetto GPO - sviluppato da Lorenzo Recchia, Nicolò Mongelli e Federico Marasciulo.*
