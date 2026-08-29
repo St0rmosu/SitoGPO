@@ -7,19 +7,21 @@
 [![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)](https://supabase.com/)
 [![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
 
-**RE-LIFE** è la piattaforma web di una startup dedicata all'upcycling di mobili: pezzi usati vengono rigenerati, rivenduti e consegnati con un occhio alla sostenibilità. Il sito presenta il catalogo di mobili restaurati con foto "prima/dopo", racconta il processo di rigenerazione e la sostenibilità, e permette di richiedere informazioni sui singoli pezzi o un servizio su misura.
+**RE-LIFE** è la piattaforma web di una startup dedicata all'upcycling di mobili: pezzi usati vengono rigenerati, rivenduti e consegnati con attenzione alla sostenibilità. Il sito presenta il catalogo di mobili restaurati con foto "prima/dopo", racconta il processo di rigenerazione e la sostenibilità, e permette di richiedere informazioni sui singoli pezzi o un servizio su misura.
+
+**Demo:** [sitogpo.vercel.app](https://sitogpo.vercel.app)
 
 ## Caratteristiche
 
 - **Catalogo e-commerce**: vetrina dei prodotti con filtri per categoria, card animate e pagina di dettaglio.
 - **Confronto prima/dopo**: nel dettaglio prodotto, toggle per confrontare le foto, con badge (Eco-Friendly, Artigianato, Restaurato), specifiche (provenienza, misure, materiali) e CO₂ risparmiata.
-- **Storytelling del processo**: timeline a 5 passi della rigenerazione e contatori di impatto.
+- **Processo di rigenerazione**: timeline a 5 passi e contatori di impatto.
 - **Pagina sostenibilità**: contatori di impatto, iniziative, certificazioni e grafici donut animati in SVG.
 - **Logistica**: zone e prezzi di consegna per l'Italia, packaging ecosostenibile e guida alla consegna.
 - **Servizio su misura**: form di contatto per privati e aziende con workflow in 4 passi.
-- **Temi per pagina**: la Navbar assume palette di colori diverse in base alla sezione, con design system Tailwind v4 personalizzato (palette crema/terracotta/sage/mezzanotte).
+- **Temi per pagina**: la Navbar usa una palette diversa per ogni sezione (design system Tailwind v4: crema/terracotta/sage/mezzanotte).
 
-## Tech stack
+## Tecnologie
 
 - **Next.js 16 & React 19** — framework full-stack con App Router e Server/Client Components
 - **TypeScript 5** — tipizzazione statica
@@ -29,11 +31,50 @@
 - **Lucide Icons** — iconografia
 - **Vercel** — hosting e deployment continuo
 
+## Uso
+
+1. Avvia il server di sviluppo e visita `http://localhost:3000`.
+2. Esplora la home: hero, sezione logistica e "Chi siamo".
+3. Apri **Shop**: filtra per categoria, seleziona un prodotto e confronta le foto prima/dopo con il toggle.
+4. Premi **Richiedi Informazioni** nel dettaglio prodotto per contattare il team.
+5. Visita le pagine **Processo**, **Sostenibilità** e **Logistica**.
+6. Usa **Su Misura** per il servizio custom (privati o aziende).
+
+## Installazione
+
+Prerequisiti: Node.js 20+ e npm.
+
+```bash
+git clone https://github.com/St0rmosu/sitogpo.git
+cd sitogpo
+npm install
+npm run dev
+```
+
+Variabili d'ambiente per l'integrazione Supabase/API. Il sito funziona anche solo con i dati statici:
+
+| Variabile | Uso |
+|---|---|
+| `NEXT_PUBLIC_SUPABASE_URL` | URL del progetto Supabase |
+| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Chiave anon pubblica del client |
+
+Applica `SCHEMA.sql` per creare la tabella `products` (id, nome, slug, descrizione, prezzo, misure, provenienza, materiali, co2_risparmiato, categoria, prima, dopo, immagini).
+
 ## Architettura
 
 Applicazione Next.js **App Router**: ogni pagina è un client component, i dati provengono da file JSON statici in `lib/`, mentre il database Supabase è collegato ma non ancora consumato dalle pagine:
 
 ![Diagramma architettura](docs/architecture.png)
+
+## Documentazione API
+
+Un solo endpoint è esposto (scaffolding, non ancora consumato dalle pagine):
+
+| Metodo | Endpoint | Descrizione |
+|---|---|---|
+| GET | `/api/products` | Restituisce tutti i prodotti dal database Supabase |
+
+La risposta è un array di oggetti `product` con i campi della tabella `products`. Le pagine leggono `lib/products.json`; l'endpoint è il percorso previsto per passare da dati statici a dati da database.
 
 ## Struttura del progetto
 
@@ -63,64 +104,4 @@ sitogpo/
 └── package.json
 ```
 
-## Installazione e setup
-
-Prerequisiti: Node.js 20+ e npm.
-
-```bash
-git clone https://github.com/St0rmosu/sitogpo.git
-cd sitogpo
-npm install
-npm run dev
-```
-
-Variabili d'ambiente (per l'integrazione Supabase/API; il sito funziona anche solo con i dati statici):
-
-| Variabile | Uso |
-|---|---|
-| `NEXT_PUBLIC_SUPABASE_URL` | URL del progetto Supabase |
-| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Chiave anon pubblica del client |
-
-Database: applicare `SCHEMA.sql` per creare la tabella `products` (id, nome, slug, descrizione, prezzo, misure, provenienza, materiali, co2_risparmiato, categoria, prima, dopo, immagini).
-
-## Uso
-
-1. Avvia il server di sviluppo e visita `http://localhost:3000`.
-2. Esplora la home: hero, sezione logistica e "Chi siamo".
-3. Apri **Shop**: filtra per categoria, seleziona un prodotto e confronta le foto prima/dopo con il toggle.
-4. Premi **Richiedi Informazioni** nel dettaglio prodotto per contattare il team.
-5. Visita le pagine **Processo**, **Sostenibilità** e **Logistica** per il racconto dell'impatto.
-6. Usa **Su Misura** per il servizio custom (privati o aziende).
-
-## Demo
-
-Demo live: [sitogpo.vercel.app](https://sitogpo.vercel.app)
-
-## Documentazione API
-
-Un solo endpoint è esposto (scaffolding, non ancora consumato dalle pagine):
-
-| Metodo | Endpoint | Descrizione |
-|---|---|---|
-| GET | `/api/products` | Restituisce tutti i prodotti dal database Supabase |
-
-Risposta: array di oggetti `product` con i campi della tabella `products`. Le pagine leggono `lib/products.json`; l'endpoint è il percorso previsto per passare da dati statici a dati da database.
-
-## Decisioni di engineering
-
-- **Dati JSON statici come default**: il catalogo vive in `lib/products.json`, rendendo il sito deployabile senza servizi esterni. Supabase e l'API route sono predisposti ma non collegati: il passaggio al DB è un lavoro in corso.
-- **Client components con Framer Motion**: tutte le pagine sono client component per le animazioni di scroll e reveal, a scapito della serializzazione SSR dei contenuti.
-- **Design system CSS-first (Tailwind v4)**: palette e font definiti in CSS, con temi per pagina tramite la Navbar.
-- **Form di contatto front-end only**: il form è validato lato client ma non invia dati a un backend; soluzione temporanea in attesa di un endpoint di submit.
-- **No autenticazione/carrello**: la piattaforma è attualmente vetrina; carrello, ordini e utenti sono fuori scope per questa versione.
-
-## Limiti e prossimi passi
-
-- I dati dei prodotti sono statici: collegare le pagine all'API `/api/products` per un catalogo gestito da CMS.
-- Il form di contatto non invia dati a backend.
-- Nessun carrello, checkout o autenticazione utente.
-- Nomi di dominio/brand discordanti (repo `sitogpo` vs brand "RE-LIFE" vs footer "L'Impatto Visivo"): uniformare l'identità.
-- Dipendenze inutilizzate in `package.json` (`@chenglou/pretext`, `motion`, `clsx`, `tailwind-merge`): da ripulire.
-- Prossimi passi: integrazione completa Supabase, form funzionante, SEO/meta completi, i18n (IT/EN).
-
-*Progetto GPO - sviluppato da Lorenzo Recchia, Nicolò Mongelli e Federico Marasciulo.*
+*Progetto GPO, sviluppato da Lorenzo Recchia, Nicolò Mongelli e Federico Marasciulo.*
