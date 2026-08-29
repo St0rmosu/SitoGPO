@@ -33,20 +33,7 @@
 
 Applicazione Next.js **App Router**: ogni pagina è un client component, i dati provengono da file JSON statici in `lib/`, mentre il database Supabase è collegato ma non ancora consumato dalle pagine:
 
-```mermaid
-flowchart TD
-    A["Next.js App<br/>app/ (routing + layout + metadata)"] --> B["/ (home)"]
-    A --> C["/shop<br/>/shop/[slug]"]
-    A --> D["/processo (timeline)"]
-    A --> E["/sostenibilita (impatto)"]
-    B --> F[components/ client]
-    C --> F
-    D --> F
-    E --> F
-    F --> G[lib/ JSON]
-    F --> H[lib/supabase<br/>/api/products]
-    H -->|GET| I[Supabase products]
-```
+![Diagramma architettura](docs/architecture.png)
 
 ## Struttura del progetto
 
